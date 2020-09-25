@@ -4,7 +4,7 @@ import pandas as pd
 
 app=Flask(__name__)
 
-model=pd.read_pickle('rfc_model_heart.pickle')
+model=pd.read_pickle('model_heart_64bit.pickle')
 
 @app.route('/')	
 def home():
@@ -39,7 +39,7 @@ def predict():
 	chances=model.predict([lis])
 
 
-	return render_template('result.html',prediction_text=f'and the prediction is : {chances[0]}' )
+	return render_template('result.html',prediction_text=chances[0] )
 
 if __name__=='__main__':
 	app.run(debug=True)
