@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>this is my page</h1>
+	
+	{% for i in range(0,len) %}
+		<form action="{{url_for('predict')}}" method='POST'>
+	
+			{{lis[i]}}: <input type="number" step='any' required name="{{lis[i]}}"><br> <br>
+	
+
+
+
+	{% endfor %}
+			<input type="submit" name="" value='submit'>
+</form>
+</body>
+</html>
