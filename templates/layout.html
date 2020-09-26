@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>Heart Failure Prediction</title>
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+			<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+
+		<title>Heart Failure Predictor</title>
+	</head>
+	<body>
+		<!-- Website Title -->
+			<div class="container" style='background: antiquewhite;
+										margin-bottom: 20px;'>
+										
+				<h1 style='color: deeppink;
+						margin-bottom: 20px;'>Heart Failure Predictor
+				</h1>
+						
+			</div>
+				
+		{% block body %}{% endblock %}
+		
+		<!-- Footer -->
+			<div style='position: fixed;left: 0;bottom: 0; width: 100%;font-style: italic;background: antiquewhite;'>
+				
+					<a target="_blank" href="#"><i class="fab fa-github fa-lg contact-icon" style='padding-top: 10px;'></i></a>
+					<a target="_blank" href="#"><i class="fab fa-linkedin fa-lg contact-icon" style='padding-top: 10px;'></i></a>
+				
+				<p class='footer-description' style='margin-top: 7px;margin-bottom: 0.5px;
+    												font-size: 15px;'>Made by Pranay Mohadikar</p>
+				<p class='footer-description' style='margin-top: 1px;font-size: 15px;'>*A Machine Learning Web App, Built with Flask, Deployed using Heroku*</p>
+			</div>
+		
+
+		
+	</body>
+</html>
