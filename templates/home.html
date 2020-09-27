@@ -1,20 +1,20 @@
 {% extends 'layout.html' %}
 {% block body %}
 
-	<div >
-	{% for i in range(0,len) %}
+	<div>
+		{% for i in range(0,len) %}
 		
 			<form action="{{url_for('predict')}}" style="margin-bottom: 100px;"  method='POST'>
 			
 	
 				<b>{{lis[i]}}:</b> <input type="number" step='any' width='50%' required name="{{lis[i]}}"><br> <br>
-				
+
 			
 			
 		
 
 
-	{% endfor %}
+		{% endfor %}
 				<input type="submit" name="" value='submit'>
 			</form>
 	</div>	
