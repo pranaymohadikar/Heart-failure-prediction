@@ -17,6 +17,7 @@ def home():
 	for i in x:
 		lis.append(i) 
 	
+	
 
 	return render_template('home.html', len=len(lis), lis=lis)
 

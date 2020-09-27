@@ -1,6 +1,12 @@
 {% extends 'layout.html' %}
 {% block body %}
 
-	{{prediction_text}}
+					{% if prediction_text==0 %}
+						<h1> No such chnaces but keep you health checked </h1>
+						<img class="gif" width='100' height='100' style='margin-left: auto; margin-right:auto;' src="{{ url_for('static', filename='safe.gif') }}" alt="SPAM Image">
+					{% elif prediction_text==1 %}
+						<h1> There are chances of heart failure. So take care of your health</h1>
+						<img class="gif" width='100' height='100' style='margin-left: auto; margin-right:auto;'  src="{{ url_for('static', filename='cancer.gif') }}" alt="Not a spam image">
+					{% endif %}
 
 {% endblock %}
